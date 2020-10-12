@@ -1,0 +1,18 @@
+
+	Dentro da pasta nlw#3:
+
+		yarn create react-app web --template typescript
+
+		yarn add react-icons
+
+		para rotas: yarn add react-router-dom
+
+		mapa: yarn add leaflet react-leaflet
+
+		TileLayer: servidor que consigo pegar imagens do mapa, ruas etc
+
+	 {/*<TileLayer url="https://a.tile.openstreetmap.org/{z}/{x}/{y}.png" />*/}
+	
+		<TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}/>
+
+	MEU TOKEN: pk.eyJ1IjoiZ3VzdGF2b3BhdHJvY2luaW8iLCJhIjoiY2tnNnhhenRmMDFzcTJycG1ldWE4c2RmayJ9.pY79XgHQa4bGkDYN8LCJ2g
