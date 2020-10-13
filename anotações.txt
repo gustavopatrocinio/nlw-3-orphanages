@@ -16,3 +16,86 @@
 		<TileLayer url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}/>
 
 	MEU TOKEN: pk.eyJ1IjoiZ3VzdGF2b3BhdHJvY2luaW8iLCJhIjoiY2tnNnhhenRmMDFzcTJycG1ldWE4c2RmayJ9.pY79XgHQa4bGkDYN8LCJ2g
+
+
+
+	No backend:
+
+		yarn init -y - isso criará um package.json no projeto
+
+		yarn add express
+
+		yarn add typescript -D
+
+		yarn tsc --init
+
+		yarn add ts-node-dev -D - pacote que nos possibilita executar o projeto executando typescript e node
+
+
+
+	BANCO UTILIZADO SQLITE:
+
+		yarn add typeorm sqlite3 - ferramenta que permite o node acessar o banco de dados e sqlite3 extensão do sqlite com node
+
+
+
+	Para dizer pro orm que quer rodar ele com typescript ao invés de JS no package.json nos scripts adicione:
+		
+		"typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
+
+		
+	Criando migration orfanatos:	
+
+		yarn typeorm migration:create -n create_orphanages
+
+		
+
+	executar migration -> yarn typeorm migration:run
+
+		getRepository -> dita como posso cria, alterar, deletar e etc dados no banco de dados, através dele enviamos dados
+		para o banco
+
+
+
+		criando migratin images:
+
+			yarn typeorm migration:create -n create_images
+
+
+
+		Para trabalhar com uploads de arquivos em geral dentro do node utilizamos uma biblioteca chamada multer:
+
+			yarn add multer
+
+
+
+		hack pro typescript entender que estamos lidando com upload de multiplos arquivos:
+		
+			request.files as Express.Multer.File[]; - fornçando ele entender que é um array
+
+	
+	Tratamento de erros:
+
+		yarn add express-async-errors
+
+	
+	Módulo de validação:
+		
+		yarn add yup
+
+
+	yarn add cors - permite que a aplicação seja acessível de diferentes domínios
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
