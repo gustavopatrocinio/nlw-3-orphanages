@@ -71,6 +71,8 @@
 
 		hack pro typescript entender que estamos lidando com upload de multiplos arquivos:
 		
+
+
 			request.files as Express.Multer.File[]; - fornçando ele entender que é um array
 
 	
@@ -88,10 +90,54 @@
 	
 
 
+	<TileLayer 
+                //  url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                >
+
+
+
+	ETAPA DE FAZER INTEGRAÇÃO DO BACK COM FRONTEND:
+
+		yarn add axios
+
+	Usando o useEffect para renderizar todos os orfanatos em tela no mapa:
+
+		useEffect(() => {
+        		api.get('orphanages').then(response => { //esse then é a resposta devolvida
+            		console.log(response);
+        		});
+    		}, []);
+
+	
+	TODA VEZ QUE EU TIVER UMA VARIÁVEL QUE PRECISA SER ALTERADA PELO PRÓPRIO COMPONENTE DEVEMOS SALVÁ-LA NO ESTADO - useState
+
+
+
+	useState devolve array e uma função para alterar o valor desse array
+
+
+
+	PARTE MOBILE DA APLICAÇÃO:
+
+		
+		yarn add global expo-cli
+
+		expo init mobile
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+			
 
 
 
